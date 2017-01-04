@@ -12,7 +12,7 @@ import com.github.artembondar.myrecyclerview.model.Movie;
 import java.util.List;
 
 
-public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHolder> {
+public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MovieViewHolder> {
 
     private List<Movie> movies;
 
@@ -29,7 +29,7 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
         }
     }
 
-    public MovieAdapter(List<Movie> movies) {
+    public MoviesAdapter(List<Movie> movies) {
         this.movies = movies;
     }
 
@@ -51,7 +51,4 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
     public int getItemCount() {
         return movies.size();
     }
-
-
-
 }
