@@ -7,6 +7,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
 import com.github.artembondar.myrecyclerview.adapter.MoviesAdapter;
+import com.github.artembondar.myrecyclerview.adapter.decoration.DividerItemDecoration;
 import com.github.artembondar.myrecyclerview.model.Movie;
 
 import java.util.ArrayList;
@@ -24,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
         adapter = new MoviesAdapter(movies);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(layoutManager);
+        recyclerView.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL));
         recyclerView.setItemAnimator(new DefaultItemAnimator());
         recyclerView.setAdapter(adapter);
         prepareMovieData();
